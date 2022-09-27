@@ -1,0 +1,107 @@
+body
+{
+    background-image: url("./img/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Nunito', sans-serif;
+} 
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo
+{
+    width: 15%;
+    border: 1px black solid;
+    background-color: beige;
+    opacity: 70%;
+    display: flex;
+}
+
+#logo p
+{
+    margin: auto;
+}
+
+.nav
+{
+    display: flex;
+    justify-content: space-between;
+    border: 1px black solid;
+    width: 50%;
+    padding: 1%;
+    background-color: beige;
+    opacity: 70%;
+}
+
+.network
+{
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    border: 1px white solid;
+    background-color: beige;
+    opacity: 70%;
+}
+.network a
+{
+    margin: auto;
+}
+.network img
+{
+    width: 25px;
+    height: 25px;
+    margin: auto;
+}
+
+.main
+{
+    align-items: center;
+    text-align: center;
+    margin: 5% 10%;
+    padding: 2%;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*tabcontent style*/
+#index
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+#profil
+{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+#BTS
+{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+#apprentissage
+{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+}
+
+#projets
+{
+    width: 200px;
+    height: 200px;
+}
