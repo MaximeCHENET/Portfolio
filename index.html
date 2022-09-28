@@ -1,109 +1,227 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css" >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
     <script src="/function.js"></script>
 
-    <link rel="icon" href="./img/icon.png" >
+    <link rel="icon" href="./img/icon.png" />
     <title>Portfolio</title>
-</head>
+  </head>
 
-<header>
+  <header>
     <div id="logo">
-        <button onclick="changeDiv(event, 'index')">Portfolio</button>
+      <button onclick="changeDiv(event, 'index')">Portfolio</button>
     </div>
+<!-- Navigation entre les sections -->
     <div class="nav">
-        
-        <button onclick="changeDiv(event, 'profil')">Profil</button>
-        <button onclick="changeDiv(event, 'BTS')">BTS SIO</button>
-        <button onclick="changeDiv(event, 'apprentissage')">Apprentissage personnel</button>
-        <button onclick="changeDiv(event, 'projets')">Projets</button>
+      <button onclick="changeDiv(event, 'profil')">Profil</button>
+      <button onclick="changeDiv(event, 'BTS')">BTS SIO</button>
+      <button onclick="changeDiv(event, 'apprentissage')">
+        Apprentissage personnel
+      </button>
+      <button onclick="changeDiv(event, 'projets')">Projets</button>
     </div>
+<!-- Réseaux sociaux et CV -->
     <div class="network">
-        <a href="https://www.linkedin.com/in/maxime-chenet-9316621b4/"><img src="./img/linkedin.png" /></a>
-        <a href="https://github.com/MaximeCHENET"><img src="./img/github.png" /></a>
-        <span onclick="changeDiv(event, 'cv')"><img src="./img/cv.png"/></span>
+      <a href="https://www.linkedin.com/in/maxime-chenet-9316621b4/"
+        ><img src="./img/linkedin.png"
+      /></a>
+      <a href="https://github.com/MaximeCHENET"
+        ><img src="./img/github.png"
+      /></a>
+      <span onclick="changeDiv(event, 'cv')"><img src="./img/cv.png" /></span>
     </div>
-</header>
+  </header>
 
-<body>
+  <body>
+<!-- Section Index (par défaut) -->
     <div class="main">
-        <div id="index" class="tabcontent">
-            <h3>Maxime CHENET</h3>
-            <p>Elève de BTS SIO SLAM 2ème année</p>
-            <p>Portfolio 2022</p>
-          </div>
-          
-          <div id="profil" class="tabcontent">
-            <h3>à propos de moi...</h3>
-            <p>Après un Bac STI2D option SIN, j'ai obtenu ma 1ère année de BTS SNIR, mêlant l'électronique avec des projets Arduino,
-                ainsi que de la programmation système avec le langage C.<br />
-                Je me suis ensuite reconverti dans le développement Web en intégrant directement
-                une 2ème année de BTS SIO SLAM.
-                Je suis élève à l'école IPSSI au campus de Marne la Vallée.</p>
-            
-            <h3>Ce que je souhaite faire après le BTS ?</h3>
-            <p>Je souhaiterai approfondir mes compétences de 
-                développement en continuant mes études 
-                avec un Bachelor Fullstack DevOps
-            </p>
+      <div id="index" class="tabcontent">
+        <h3>Maxime CHENET</h3>
+        <p>Elève de BTS SIO SLAM 2ème année</p>
+        <p>Portfolio 2022</p>
+      </div>
+<!-- Section Profil -->
+      <div id="profil" class="tabcontent">
+        <h3>à propos de moi...</h3>
+        <p>
+          Après un Bac STI2D option SIN, j'ai obtenu ma 1ère année de BTS SNIR,
+          mêlant l'électronique avec des projets Arduino, ainsi que de la
+          programmation système avec le langage C.<br />
+          Je me suis ensuite reconverti dans le développement Web en intégrant
+          directement une 2ème année de BTS SIO SLAM. Je suis élève à l'école
+          IPSSI au campus de Marne la Vallée.
+        </p>
+
+        <h3>Ce que je souhaite faire après le BTS ?</h3>
+        <p>
+          Je souhaiterai approfondir mes compétences de développement en
+          continuant mes études avec un Bachelor Fullstack DevOps
+        </p>
+      </div>
+<!-- Section BTS -->
+      <div id="BTS" class="tabcontent">
+        <h3>BTS SIO SLAM</h3>
+        <p>Ouais c'est cool on apprend des trucs !</p>
+      </div>
+<!-- Section Apprentissage Personnel -->
+      <div id="apprentissage" class="tabcontent">
+        <h3>Apprentissage personnel</h3>
+        <h4>JS</h4>
+        <p>Apprentissage du JS avec les cours OpenClassroom</p>
+    <!-- Lien amenant au cours OpenClassroom -->
+        <a
+          href="https://openclassrooms.com/fr/courses/
+                6175841-apprenez-a-programmer-avec-javascript"
+        >
+          <p>Apprenez à programmez avec JavaScript</p>
+        </a>
+    <!-- Lien amenant au cours OpenClassroom -->
+        <a
+          href="https://openclassrooms.com/fr/courses/
+                5543061-ecrivez-du-javascript-pour-le-web"
+        >
+          <p>Écrivez du JavaScript pour le web</p>
+        </a>
+        <h5>Vidéos(s)</h5>
+    <!-- Intégration d'une vidéo -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/b0dPBK37-M8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <h4>PHP SQL</h4>
+        <p>Apprentissage du PHP avec SQL avec le cours OpenClassroom</p>
+    <!-- Lien amenant au cours OpenClassroom -->    
+        <a
+          href="https://openclassrooms.com/fr/courses/
+                918836-concevez-votre-site-web-avec-php-et-mysql"
+        >
+          <p>Concevez votre site web avec php et MySQL</p>
+        </a>
+        <h4>HTML CSS</h4>
+        <p>Apprentissage du HTML ET CSS avec le cours OpenClassroom</p>
+    <!-- Lien amenant au cours OpenClassroom -->    
+        <a
+          href="https://openclassrooms.com/fr/courses/
+                1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3"
+        >
+          <p>Apprenez à créer votre site web avec HTML5 et CSS3</p>
+        </a>
+        <h5>Vidéo(s)</h5>
+    <!-- Intégration d'une vidéo -->    
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/BdzKNrxLiSs"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+<!-- Section Projets -->
+      <div id="projets" class="tabcontent"></div>
+<!-- Section CV -->
+      <div id="cv" class="tabcontent">
+        <div id="cvProfil">
+          <a href=""
+            ><img src="/img/download.png" width="50px" height="50px"
+          /></a>
+          <h2>Maxime CHENET</h2>
+          <p>Etudiant 2ème année BTS SIO SLAM</p>
         </div>
-
-          <div id="BTS" class="tabcontent">
-            <h3>BTS SIO SLAM</h3>
-            <p>Ouais c'est cool on apprend des trucs !</p>
-          </div>
-          
-          <div id="apprentissage" class="tabcontent">
-            <h3>Apprentissage personnel</h3>
-            <iframe width="560" height="315" 
-                src="https://www.youtube.com/embed/BdzKNrxLiSs" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            <p>OpenClassroom</p>
-          </div>
-          <div id="projets" class="tabcontent">
-
-          </div>
-          
-          <div id="cv" class="tabcontent">
-            <div id="cvProfil">
-                <a href=""><img src="/img/download.png" width="50px" height="50px"/></a>
-                <h2>Maxime CHENET</h2>
-                <p>Etudiant 2ème année BTS SIO SLAM</p>
+        <div id="cvContent">
+          <div id="cvExpPro">
+            <h3>Expériences Professionnelles</h3>
+            <div class="cvBloc">
+              <h4>LessonSharing</h4>
+              <p>Alternance</p>
+              <p>Développement Web</p>
+              <p class="cvInfos">
+                76 Rue du Trou Grillon, 91280 Saint-Pierre-Du-Perray
+              </p>
             </div>
-            <div id="cvContent">
-                <div id="cvExpPro">
-                    <h3>Expériences Professionnelles</h3>
-                    <div class="cvBloc">
-                        <h4>LessonSharing</h4>
-                        <p>Alternance Développement Web</p>
-                        <p class="cvInfos">76 Rue du Trou Grillon, 91280 Saint-Pierre-Du-Perray</p>    
-                    </div>
-                    <div class="cvBloc">
-                        <h4>METERIS</h4>
-                        <p>Alternance Technicien Informatique</p>
-                        <p class="cvInfos">8 Rue Georges Claude, 77100 Meaux</p>
-                    </div>
-                </div>
-                <div id="cvFormations">
-                    <h3>Formations</h3>
-                    <div class="cvBloc">
-                        <h4>IPSSI</h4>
-                        <p>BTS SIO SLAM</p>
-                        <p class="cvInfos">14 Av. de l'Europe, 77144 Montévrain</p>
-                    </div>
-                </div>
+            <div class="cvBloc">
+              <h4>METERIS</h4>
+              <p>Alternance</p>
+              <p>Technicien Informatique</p>
+              <p class="cvInfos">8 Rue Georges Claude, 77100 Meaux</p>
+            </div>
+            <div class="cvBloc">
+              <h4>Pro&Cie</h4>
+              <p>Stage de découverte</p>
+              <p>Vente, Installation et Réparation Electroménager</p>
+              <p class="cvInfos">La Ferté sous Jouarre</p>
             </div>
           </div>
+          <div id="cvFormations">
+            <h3>Formations</h3>
+            <div class="cvBloc">
+              <h4>IPSSI</h4>
+              <p>BTS SIO SLAM</p>
+              <p class="cvInfos">14 Av. de l'Europe, 77144 Montévrain</p>
+            </div>
+            <div class="cvBloc">
+              <h4>UTEC</h4>
+              <p>BTS SNIR 1ère année</p>
+              <p class="cvInfos">6 Bd Olof Palme, 77184 Emerainville</p>
+            </div>
+            <div class="cvBloc">
+              <h4>Sainte Céline</h4>
+              <p>Baccalauréat STI2D option SIN</p>
+              <p class="cvInfos">La Ferté sous Jouarre</p>
+            </div>
+            <div class="cvBloc">
+              <h4>Sainte Marie</h4>
+              <p>Brevet des Collèges</p>
+              <p class="cvInfos">Meaux</p>
+            </div>
+          </div>
+        </div>
+        <div id="cvFoot">
+          <h4>Compétences</h4>
+          <br />
+          <div class="cvBlocFoot">
+            <p>HTML</p>
+          </div>
+          <div class="cvBlocFoot">
+            <p>CSS</p>
+          </div>
+          <div class="cvBlocFoot">
+            <p>PHP</p>
+          </div>
+          <div class="cvBlocFoot">
+            <p>JS</p>
+          </div>
+          <div class="cvBlocFoot">
+            <p>Python</p>
+          </div>
+          <div class="cvBlocFoot">
+            <p>C</p>
+          </div>
+          <div class="cvBlocFoot">
+            <p>C#</p>
+          </div>
+          <div class="cvBlocFoot">
+            <p>C++</p>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

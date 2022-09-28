@@ -1,164 +1,161 @@
-body
-{
-    background-image: url("./img/background.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Nunito', sans-serif;
-} 
-
-header
-{
-    display: flex;
-    justify-content: space-between;
+body {
+  background-image: url("./img/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Nunito", sans-serif;
 }
 
-#logo
-{
-    width: 15%;
-    border: 1px black solid;
-    background-color: beige;
-    opacity: 70%;
-    display: flex;
+header {
+  display: flex;
+  justify-content: space-between;
 }
 
-#logo p
-{
-    margin: auto;
+#logo {
+  border-radius: 5px;
+  width: 15%;
+  border: 1px black solid;
+  background-color: beige;
+  opacity: 70%;
+  display: flex;
 }
 
-.nav
-{
-    display: flex;
-    justify-content: space-between;
-    border: 1px black solid;
-    width: 50%;
-    padding: 1%;
-    background-color: beige;
-    opacity: 70%;
+#logo p {
+  margin: auto;
 }
 
-.network
-{
-    display: flex;
-    justify-content: space-between;
-    width: 15%;
-    border: 1px white solid;
-    background-color: beige;
-    opacity: 70%;
-}
-.network a
-{
-    margin: auto;
-}
-.network img
-{
-    width: 25px;
-    height: 25px;
-    margin: auto;
+.nav {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px black solid;
+  width: 50%;
+  padding: 1%;
+  background-color: beige;
+  opacity: 70%;
 }
 
-.main
-{
-    align-items: center;
-    text-align: center;
-    margin: 5% 10%;
-    padding: 2%;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 0.7);
+.network {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  border: 1px white solid;
+  background-color: beige;
+  opacity: 70%;
+}
+.network a,
+span {
+  margin: auto;
+}
+.network img {
+  width: 25px;
+  height: 25px;
+  margin: auto;
+}
+
+.main {
+  align-items: center;
+  text-align: center;
+  margin: 5% 10%;
+  padding: 2%;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*tabcontent style*/
-#index
-{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
-    width: auto;
-    height: auto;
+#index {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  width: auto;
+  height: auto;
 }
 
-#profil
-{
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
+#profil {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
 }
 
-#BTS
-{
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
+#BTS {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
 }
 
-#apprentissage
-{
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
+#apprentissage {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
 }
 
-#projets
-{
-    width: 200px;
-    height: 200px;
+#projets {
+  width: 200px;
+  height: 200px;
 }
-#cv
-{
-    display: none;
-    flex-wrap: wrap;
+#cv {
+  display: none;
+  flex-wrap: wrap;
+}
+#cv #cvProfil {
+  width: 100%;
+  text-align: center;
+}
+#cv #cvContent {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+#cv .cvBloc {
+  border-radius: 10px;
+  background-color: rgb(201, 201, 201);
+  margin: 0px 6px;
+  padding: 0px 6px;
+}
+#cv #cvExpPro {
+  border-radius: 12px;
+  width: 48%;
+  margin-right: 1px;
+  padding-left: 6px;
+  text-align: left;
+  background-color: rgb(216, 216, 216);
+}
+#cvExpPro p {
+  font-size: 0.9em;
+}
+.cvInfos {
+  font-size: 0.85em;
+  font-style: italic;
+}
+#cv #cvFormations {
+  border-radius: 12px;
+  width: 48%;
+  margin-right: 1px;
+  padding-left: 6px;
+  text-align: left;
+  background-color: rgb(216, 216, 216);
+}
+#cvFormations p {
+  font-size: 0.9em;
+}
+#cvFoot {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: rgb(216, 216, 216);
+}
+#cvFoot h4 {
+  width: 100%;
+}
+.cvBlocFoot {
+  width: 48%;
 
-}
-#cv #cvProfil
-{
-    width: 100%;
-    text-align: center;
-}
-#cv #cvContent
-{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-#cv .cvBloc
-{
-    border-radius: 10px;
-    background-color: rgb(201, 201, 201);
-    margin: 0px 6px;
-    padding: 0px 6px;
-}
-#cv #cvExpPro
-{
-    border-radius: 12px;
-    width: 48%;
-    margin-right: 1px;
-    padding-left: 6px;
-    text-align: left;
-    background-color: rgb(216, 216, 216);
-}
-#cvExpPro p
-{
-    font-size: 0.9em;
-}
-.cvInfos
-{
-    font-size: 0.85em;
-    font-style: italic;
-}
-#cv #cvFormations
-{
-    border-radius: 12px;
-    width: 48%;
-    margin-right: 1px;
-    padding-left: 6px;
-    text-align: left;
-    background-color: rgb(216, 216, 216);
-}
-#cvFormations p
-{
-    font-size: 0.9em;
+  padding: 5px;
 }
