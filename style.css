@@ -74,6 +74,8 @@ header
     flex-direction: column;
     text-align: center;
     margin: auto;
+    width: auto;
+    height: auto;
 }
 
 #profil
@@ -104,4 +106,59 @@ header
 {
     width: 200px;
     height: 200px;
+}
+#cv
+{
+    display: none;
+    flex-wrap: wrap;
+
+}
+#cv #cvProfil
+{
+    width: 100%;
+    text-align: center;
+}
+#cv #cvContent
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+#cv .cvBloc
+{
+    border-radius: 10px;
+    background-color: rgb(201, 201, 201);
+    margin: 0px 6px;
+    padding: 0px 6px;
+}
+#cv #cvExpPro
+{
+    border-radius: 12px;
+    width: 48%;
+    margin-right: 1px;
+    padding-left: 6px;
+    text-align: left;
+    background-color: rgb(216, 216, 216);
+}
+#cvExpPro p
+{
+    font-size: 0.9em;
+}
+.cvInfos
+{
+    font-size: 0.85em;
+    font-style: italic;
+}
+#cv #cvFormations
+{
+    border-radius: 12px;
+    width: 48%;
+    margin-right: 1px;
+    padding-left: 6px;
+    text-align: left;
+    background-color: rgb(216, 216, 216);
+}
+#cvFormations p
+{
+    font-size: 0.9em;
 }
