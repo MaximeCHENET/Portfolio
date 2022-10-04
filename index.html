@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/Portfolio/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
       rel="stylesheet"
     />
-    <script src="/function.js"></script>
+    <script src="/Portfolio/function.js"></script>
 
     <link rel="icon" href="./img/icon.png" />
     <title>Portfolio</title>
@@ -21,7 +21,7 @@
     <div id="logo">
       <button onclick="changeDiv(event, 'index')">Portfolio</button>
     </div>
-<!-- Navigation entre les sections -->
+    <!-- Navigation entre les sections -->
     <div class="nav">
       <button onclick="changeDiv(event, 'profil')">Profil</button>
       <button onclick="changeDiv(event, 'BTS')">BTS SIO</button>
@@ -30,12 +30,12 @@
       </button>
       <button onclick="changeDiv(event, 'projets')">Projets</button>
     </div>
-<!-- Réseaux sociaux et CV -->
+    <!-- Réseaux sociaux et CV -->
     <div class="network">
-      <a href="https://www.linkedin.com/in/maxime-chenet-9316621b4/"
+      <a href="https://www.linkedin.com/in/maxime-chenet-9316621b4/" target="_blank"
         ><img src="./img/linkedin.png"
       /></a>
-      <a href="https://github.com/MaximeCHENET"
+      <a href="https://github.com/MaximeCHENET" target="_blank"
         ><img src="./img/github.png"
       /></a>
       <span onclick="changeDiv(event, 'cv')"><img src="./img/cv.png" /></span>
@@ -43,14 +43,14 @@
   </header>
 
   <body>
-<!-- Section Index (par défaut) -->
+    <!-- Section Index (par défaut) -->
     <div class="main">
       <div id="index" class="tabcontent">
         <h3>Maxime CHENET</h3>
         <p>Elève de BTS SIO SLAM 2ème année</p>
         <p>Portfolio 2022</p>
       </div>
-<!-- Section Profil -->
+      <!-- Section Profil -->
       <div id="profil" class="tabcontent">
         <h3>à propos de moi...</h3>
         <p>
@@ -68,24 +68,24 @@
           continuant mes études avec un Bachelor Fullstack DevOps
         </p>
       </div>
-<!-- Section BTS -->
+      <!-- Section BTS -->
       <div id="BTS" class="tabcontent">
         <h3>BTS SIO SLAM</h3>
         <p>Ouais c'est cool on apprend des trucs !</p>
       </div>
-<!-- Section Apprentissage Personnel -->
+      <!-- Section Apprentissage Personnel -->
       <div id="apprentissage" class="tabcontent">
         <h3>Apprentissage personnel</h3>
         <h4>JS</h4>
         <p>Apprentissage du JS avec les cours OpenClassroom</p>
-    <!-- Lien amenant au cours OpenClassroom -->
+        <!-- Lien amenant au cours OpenClassroom -->
         <a
           href="https://openclassrooms.com/fr/courses/
                 6175841-apprenez-a-programmer-avec-javascript"
         >
           <p>Apprenez à programmez avec JavaScript</p>
         </a>
-    <!-- Lien amenant au cours OpenClassroom -->
+        <!-- Lien amenant au cours OpenClassroom -->
         <a
           href="https://openclassrooms.com/fr/courses/
                 5543061-ecrivez-du-javascript-pour-le-web"
@@ -93,7 +93,7 @@
           <p>Écrivez du JavaScript pour le web</p>
         </a>
         <h5>Vidéos(s)</h5>
-    <!-- Intégration d'une vidéo -->
+        <!-- Intégration d'une vidéo -->
         <iframe
           width="560"
           height="315"
@@ -106,7 +106,7 @@
         </iframe>
         <h4>PHP SQL</h4>
         <p>Apprentissage du PHP avec SQL avec le cours OpenClassroom</p>
-    <!-- Lien amenant au cours OpenClassroom -->    
+        <!-- Lien amenant au cours OpenClassroom -->
         <a
           href="https://openclassrooms.com/fr/courses/
                 918836-concevez-votre-site-web-avec-php-et-mysql"
@@ -115,7 +115,7 @@
         </a>
         <h4>HTML CSS</h4>
         <p>Apprentissage du HTML ET CSS avec le cours OpenClassroom</p>
-    <!-- Lien amenant au cours OpenClassroom -->    
+        <!-- Lien amenant au cours OpenClassroom -->
         <a
           href="https://openclassrooms.com/fr/courses/
                 1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3"
@@ -123,7 +123,7 @@
           <p>Apprenez à créer votre site web avec HTML5 et CSS3</p>
         </a>
         <h5>Vidéo(s)</h5>
-    <!-- Intégration d'une vidéo -->    
+        <!-- Intégration d'une vidéo -->
         <iframe
           width="560"
           height="315"
@@ -134,13 +134,13 @@
           allowfullscreen
         ></iframe>
       </div>
-<!-- Section Projets -->
+      <!-- Section Projets -->
       <div id="projets" class="tabcontent"></div>
-<!-- Section CV -->
+      <!-- Section CV -->
       <div id="cv" class="tabcontent">
         <div id="cvProfil">
-          <a href=""
-            ><img src="/img/download.png" width="50px" height="50px"
+          <a href="/Portfolio/files/CV.pdf" target="_blank"
+            ><img src="/Portfolio/img/download.png" width="50px" height="50px"
           /></a>
           <h2>Maxime CHENET</h2>
           <p>Etudiant 2ème année BTS SIO SLAM</p>

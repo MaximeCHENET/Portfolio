@@ -4,8 +4,8 @@ function changeDiv(evt, divName) {
 
   // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  for(let divBloc of tabcontent) {
+    divBloc.style.display = "none";
   }
 
   document.getElementById(divName).style.display = "flex";
