@@ -11,11 +11,8 @@ header {
 }
 
 #logo {
-  border-radius: 5px;
+  
   width: 15%;
-  border: 1px black solid;
-  background-color: beige;
-  opacity: 70%;
   display: flex;
 }
 
@@ -26,22 +23,18 @@ header {
 .nav {
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
-  border: 1px black solid;
+  justify-content: space-around;
   width: 50%;
   padding: 1%;
-  background-color: beige;
-  opacity: 70%;
 }
 
 .network {
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  width: 15%;
-  border: 1px white solid;
   background-color: beige;
   opacity: 70%;
+  width: 15%;
 }
 
 .network a,

@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+      crossorigin="anonymous"
+    >
     <script src="/Portfolio/function.js"></script>
 
     <link rel="icon" href="./img/icon.png" />
@@ -19,26 +24,26 @@
 
   <header>
     <div id="logo">
-      <button onclick="changeDiv(event, 'index')">Portfolio</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'index')">Portfolio</button>
     </div>
     <!-- Navigation entre les sections -->
     <div class="nav">
-      <button onclick="changeDiv(event, 'profil')">Profil</button>
-      <button onclick="changeDiv(event, 'BTS')">BTS SIO</button>
-      <button onclick="changeDiv(event, 'apprentissage')">
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'profil')">Profil</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'BTS')">BTS SIO</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'apprentissage')">
         Apprentissage personnel
       </button>
-      <button onclick="changeDiv(event, 'projets')">Projets</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'projets')">Projets</button>
     </div>
     <!-- Réseaux sociaux et CV -->
     <div class="network">
-      <a href="https://www.linkedin.com/in/maxime-chenet-9316621b4/" target="_blank"
-        ><img src="./img/linkedin.png"
+      <a type="button" class="btn btn-outline-primary" href="https://www.linkedin.com/in/maxime-chenet-9316621b4/" target="_blank"
+        ><img src="/Portfolio/img/linkedin.png"
       /></a>
-      <a href="https://github.com/MaximeCHENET" target="_blank"
-        ><img src="./img/github.png"
+      <a type="button" class="btn btn-outline-primary" href="https://github.com/MaximeCHENET" target="_blank"
+        ><img src="/Portfolio/img/github.png"
       /></a>
-      <span onclick="changeDiv(event, 'cv')"><img src="./img/cv.png" /></span>
+      <span type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'cv')"><img src="./img/cv.png" /></span>
     </div>
   </header>
 
@@ -135,7 +140,20 @@
         ></iframe>
       </div>
       <!-- Section Projets -->
-      <div id="projets" class="tabcontent"></div>
+      <div id="projets" class="tabcontent">
+        <div>
+          AP1
+        </div>
+        <div>
+          AP2
+        </div>
+        <div>
+          AP3
+        </div>
+        <div>
+          AP4
+        </div>
+      </div>
       <!-- Section CV -->
       <div id="cv" class="tabcontent">
         <div id="cvProfil">
