@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Portfolio/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,6 +15,12 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
       crossorigin="anonymous"
     >
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" 
+      crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/Portfolio/style.css" />
     <script src="/Portfolio/function.js"></script>
 
     <link rel="icon" href="./img/icon.png" />
@@ -24,7 +29,7 @@
 
   <header>
     <div id="logo">
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'index')">Portfolio</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'index')">Accueil</button>
     </div>
     <!-- Navigation entre les sections -->
     <div class="nav">
@@ -33,7 +38,8 @@
       <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'apprentissage')">
         Apprentissage personnel
       </button>
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'projets')">Projets</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'projets')">Tableau de synthèse / Projets</button>
+      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'veille')"> Veille technologique</button>
     </div>
     <!-- Réseaux sociaux et CV -->
     <div class="network">
@@ -51,13 +57,13 @@
     <!-- Section Index (par défaut) -->
     <div class="main">
       <div id="index" class="tabcontent">
-        <h3>Maxime CHENET</h3>
-        <p>Elève de BTS SIO SLAM 2ème année</p>
-        <p>Portfolio 2022</p>
+        <h3 class="display-2">Maxime CHENET</h3>
+        <p class="display-6">Elève de BTS SIO SLAM 2ème année</p>
+        <p class="display-6">Portfolio 2022</p>
       </div>
       <!-- Section Profil -->
       <div id="profil" class="tabcontent">
-        <h3>à propos de moi...</h3>
+        <h3 class="display-3">&Agrave propos de moi...</h3>
         <p>
           Après un Bac STI2D option SIN, j'ai obtenu ma 1ère année de BTS SNIR,
           mêlant l'électronique avec des projets Arduino, ainsi que de la
@@ -67,7 +73,7 @@
           IPSSI au campus de Marne la Vallée.
         </p>
 
-        <h3>Ce que je souhaite faire après le BTS ?</h3>
+        <h3 class="display-4">Ce que je souhaite faire après le BTS ?</h3>
         <p>
           Je souhaiterai approfondir mes compétences de développement en
           continuant mes études avec un Bachelor Fullstack DevOps
@@ -75,13 +81,54 @@
       </div>
       <!-- Section BTS -->
       <div id="BTS" class="tabcontent">
-        <h3>BTS SIO SLAM</h3>
-        <p>Ouais c'est cool on apprend des trucs !</p>
+        <h3 class="display-4">BTS SIO</h3>
+        <p>
+          Le BTS SIO forme de futurs professionnels de l’informatique 
+          à la mise en place de solutions informatiques au sein des organisations 
+          (entreprises, administrations, PME, etc.), en tant que consultant d’une SSII 
+          (société de services d’ingénierie informatique), d’une société éditrice de logiciels 
+          ou d’une société de conseils.
+        </p>
+        <ul>
+          <li>
+            Le BTS Services Informatiques aux Organisations est un diplôme reconnu par l'état de niveau BAC+2.
+          </li>
+          <li>
+            Il remplace depuis Septembre 2011, l'ancien BTS IG (Informatique de gestion).
+          </li>
+          <li>
+            En effet, cette nouvelle formule répond aux attentes de la profession en matière de qualification.
+          </li>
+          <li>
+            Le programme a évolué en fonction de la place et du rôle des TIC 
+            (Technologies de l'Information et de la Communication).
+          </li>
+          <li>
+            Et propose deux spécialités bien distinctes : Le BTS SIO Option SISR et le BTS SIO Option SLAM.
+          </li>
+        </ul>
+        <h3 class="display-4">OPTIONS...</h3>
+        <h4 class="display-6">Option SLAM</h4>
+        <p style="font-style: italic;">Solutions Logicielles et Applications Métiers</p>
+        <p>
+          La spécialisation SLAM du BTS SIO est plus orientée Développement. 
+          Elle permet d'apprendre à réaliser des logiciels, sites webs, applications mobiles; 
+          mais aussi de rédiger des documentations techniques liées à celles-ci. 
+          De plus, elle permet d'apprendre à former des utilisateurs pour gérer la maintenance des applications.
+        </p>
+        <h4 class="display-6">Option SISR</h4>
+        <p style="font-style: italic;">Solutions d'Infrastructures Systèmes et Réseaux</p>
+        <p>
+          La spécialisation SISR du BTS SIO permet d’apprendre un métier qui consiste à installer, 
+          configurer et gérer des équipements et des réseaux informatiques. 
+          Cela signifie intervenir sur la conception, la mise en place, le déploiement et 
+          la maintenance de programmes destinés à la gestion au sein d’une organisation.
+        </p>
       </div>
       <!-- Section Apprentissage Personnel -->
       <div id="apprentissage" class="tabcontent">
-        <h3>Apprentissage personnel</h3>
-        <h4>JS</h4>
+        <h3 class="display-4">Apprentissage personnel</h3>
+        <h4 class="display-6">JS</h4>
         <p>Apprentissage du JS avec les cours OpenClassroom</p>
         <!-- Lien amenant au cours OpenClassroom -->
         <a
@@ -109,7 +156,7 @@
           allowfullscreen
         >
         </iframe>
-        <h4>PHP SQL</h4>
+        <h4 class="display-6">PHP SQL</h4>
         <p>Apprentissage du PHP avec SQL avec le cours OpenClassroom</p>
         <!-- Lien amenant au cours OpenClassroom -->
         <a
@@ -118,7 +165,7 @@
         >
           <p>Concevez votre site web avec php et MySQL</p>
         </a>
-        <h4>HTML CSS</h4>
+        <h4 class="display-6">HTML CSS</h4>
         <p>Apprentissage du HTML ET CSS avec le cours OpenClassroom</p>
         <!-- Lien amenant au cours OpenClassroom -->
         <a
@@ -141,18 +188,112 @@
       </div>
       <!-- Section Projets -->
       <div id="projets" class="tabcontent">
-        <div>
-          AP1
+        <!-- <a href="/Portfolio/files/"> -->
+          
+          <!-- <embed src="files/Tableau récapitulatif matériels.pdf" width=800 height=500 type='application/pdf'/> -->
+        <!-- </a> -->
+        <h3 class="display-3">AP</h3>
+        <div id="ap">
+            <div onclick="changeDiv(event, 'ap1')" class="btn btn-outline-secondary">
+              AP1
+            </div>
+          <div onclick="changeDiv(event, 'ap2')" class="btn btn-outline-secondary">
+            AP2
+          </div>
+          <!-- <div class="btn btn-outline-secondary">
+            AP3
+          </div>
+          <div class="btn btn-outline-secondary">
+            AP4
+          </div> -->
         </div>
         <div>
-          AP2
+          <h3>Documentations</h3>
+          <div class="btn btn-outline-secondary">
+
+          </div>
+
         </div>
         <div>
-          AP3
+          <p class="display-6">Tableau de synthèse</p>
+          <!-- <embed src="files/Tableau de synthese.pdf" width=800 height=500 type='application/pdf'/> -->
+
+        </div>
+      </div>
+      <!-- Section AP1 -->
+      <div id="ap1" class="tabcontent">
+        <h3 class="display-4">AP1</h3>
+        <h4 class="display-6" style="text-align: left;" >Présentation de l'AP1</h4>
+        <p style="text-align: left;">
+          L'AP1 consiste à s’appuyer sur la prise de connaissance de l’environnement technique 
+          destiné à permettre aux étudiants d’expérimenter les situations définies dans le référentiel 
+          d’activités professionnelles et de mener à bien les premiers projets personnalisés encadrés.<br />
+          À partir de différentes situations professionnelles définies par l’équipe pédagogique, 
+          il permet d’aborder plus particulièrement les processus « Gestion du patrimoine informatique » et 
+          « Fourniture de services » en vue d’appréhender une configuration sur les plans technique et financier, 
+          de fournir un service aux utilisateurs par la mise à disposition de cette configuration et de vérifier 
+          la conformité du service fourni à un cahier des charges.
+          <br />
+          Pour répondre aux exigences de cet AP, nous avons créé une entreprise fictive nommée Studio GD avec 
+          tous ses documents nécessaires.
+        </p>
+        <div>
+          <h4 class="display-6">Présentation de l'entreprise</h4>
+          <embed src="/Portfolio/files/AP1/Presentation_Entreprise_AP1.pdf" width=1200 height=700 type="application/pdf" />
         </div>
         <div>
-          AP4
+          <h4 class="display-6">Présentation des documents</h4>
+          <!-- <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option onclick="selectFile(event, 'devis')" value="1"><a onclick="selectFile(event, 'devis')">Devis</a></option>
+            <option onclick="selectFile(event, 'facture')" value="2"><a onclick="selectFile(event, 'facture')">Facture</a></option>
+            <option value="3"><a onclick="selectFile()">aaa</a></option>
+          </select> -->
+          <button class="btn btn-outline-primary" onclick="selectFile(event, 'devis')">Exemple Devis</button>
+          <button class="btn btn-outline-primary" onclick="selectFile(event, 'facture')">Exemple Facture</button>
+          
+
         </div>
+
+<!-- Partie Affichage Document -->
+        <div id="devis" class="fileContent">
+          <embed src="/Portfolio/files/AP1/exemple_devis_AP1.pdf" width=1200 height=700 type="application/pdf" />
+        </div>
+        <div id="facture" class="fileContent">
+          <embed src="/Portfolio/files/AP1/exemple_facture_AP1.pdf" width=1200 height=700 type="application/pdf" />
+        </div>
+      </div>
+      <!-- Section AP2 -->
+      <div id="ap2" class="tabcontent">
+        <h3 class="display-4">AP2</h3>
+        <h4 class="display-6" style="text-align: left;" >Présentation de l'AP2</h4>
+        <div>
+          <button class="btn btn-outline-primary" onclick="selectFile(event, 'gantt')">Diagramme de Gantt</button>
+        </div>
+      <!-- Partie Affichage Document -->
+        <div id="gantt" class="fileContent">
+          <embed src="" width=1200 height=700 type="application/pdf" />
+        </div>
+      </div>
+      <!-- Section Veille technologique -->
+      <div id="veille" class="tabcontent">
+        <h3 class="display-4">Veille technologique</h3>
+        <h4 class="display-6">Qu'est-ce que la veille technologique ?</h4>
+        <p style="text-align: left;">
+          La veille technologique, élément de la veille stratégique, consiste à surveiller les évolutions techniques, 
+          les innovations dans un secteur d’activité donnée. La veille technologique comprend notamment 
+          la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper ou 
+          de s’informer sur des changements en matière de recherche, développement, brevet, 
+          lancement de nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. 
+          Cela a pour but d’évaluer l’impact sur l’environnement et l’organisation.
+        </p>
+        <p>
+          J'ai personnellement choisi de m'intéresser à L'intelligence artificielle, car ce domaine
+          ne cesse d'évoluer à une vitesse surprenante, dépassant les limites à chaque découverte.
+        </p>
+        <h4 class="display-6">Intelligence Artificielle</h4>
+        <p></p>
+        <h4 class="display-6">5G / Réalité Virtuelle</h4>
       </div>
       <!-- Section CV -->
       <div id="cv" class="tabcontent">

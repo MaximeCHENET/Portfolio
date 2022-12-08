@@ -1,8 +1,20 @@
+:root {
+  --main-color: rgba(255, 255, 255, 0.5);
+  --bloc-cv-light: rgb(201, 201, 201);
+  --bloc-cv-grey: rgb(216, 216, 216);
+
+}
+
 body {
-  background-image: url("./img/background.jpg");
+  background-image: url("./img/dark_background.jpg");
   background-attachment: fixed;
+  background-size: auto;
   background-position: center;
   font-family: "Nunito", sans-serif;
+}
+p, li
+{
+  font-size: 1.3rem;
 }
 
 header {
@@ -13,7 +25,8 @@ header {
 #logo {
   
   width: 15%;
-  display: flex;
+  padding: 1%;
+  /* display: flex; */
 }
 
 #logo p {
@@ -32,9 +45,15 @@ header {
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
-  background-color: beige;
+  /* background-color: beige; */
   opacity: 70%;
   width: 15%;
+}
+.network a.btn.btn-outline-primary, span.btn.btn-outline-primary {
+  background-color: var(--bloc-cv-grey);
+}
+.btn.btn.btn-outline-secondary {
+  color: black;
 }
 
 .network a,
@@ -54,7 +73,8 @@ span {
   margin: 5% 10%;
   padding: 2%;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--main-color);
+  border: 1px white solid;
 }
 
 /*tabcontent style*/
@@ -77,8 +97,11 @@ span {
 #BTS {
   display: none;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   margin: auto;
+}
+#BTS h3 {
+  text-align: center;
 }
 
 #apprentissage {
@@ -89,9 +112,39 @@ span {
 }
 
 #projets {
-  width: 200px;
-  height: 200px;
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
 }
+#ap {
+  display: flex;
+  margin: auto;
+}
+#ap .btn.btn-outline-secondary {
+  margin: 0 15px;
+  padding: 1.775rem 5.75rem;
+  
+}
+
+
+#ap1, #ap2
+{
+  display: none;
+  flex-direction: column;
+}
+
+/* File content style */
+#devis, #facture, #gantt {
+  display: none;
+}
+
+
+#veille {
+  display: none;
+  flex-direction: column;
+}
+
 
 #cv {
   display: none;
@@ -111,7 +164,7 @@ span {
 
 #cv .cvBloc {
   border-radius: 10px;
-  background-color: rgb(201, 201, 201);
+  background-color: var(--bloc-cv-light);
   margin: 0px 6px;
   padding: 0px 6px;
 }
@@ -122,7 +175,7 @@ span {
   margin-right: 1px;
   padding-left: 6px;
   text-align: left;
-  background-color: rgb(216, 216, 216);
+  background-color: var(--bloc-cv-grey);
 }
 
 #cvExpPro p {
@@ -140,7 +193,7 @@ span {
   margin-right: 1px;
   padding-left: 6px;
   text-align: left;
-  background-color: rgb(216, 216, 216);
+  background-color: var(--bloc-cv-grey);
 }
 
 #cvFormations p {
@@ -154,7 +207,7 @@ span {
   border-radius: 12px;
   width: 100%;
   margin-top: 10px;
-  background-color: rgb(216, 216, 216);
+  background-color: var(--bloc-cv-grey);
 }
 
 #cvFoot h4 {
