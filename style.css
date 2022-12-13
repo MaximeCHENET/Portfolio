@@ -126,6 +126,11 @@ span {
   padding: 1.775rem 5.75rem;
   
 }
+th, tr td {
+  margin: auto;
+  padding: auto;
+  text-align: center;
+}
 
 
 #ap1, #ap2
@@ -135,7 +140,7 @@ span {
 }
 
 /* File content style */
-#devis, #facture, #gantt {
+#devis, #facture, #gantt, #kbis {
   display: none;
 }
 
