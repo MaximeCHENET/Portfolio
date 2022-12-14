@@ -208,17 +208,10 @@
           </div> -->
         </div>
         <div>
-          <h3>Documentations</h3>
-          <div class="btn btn-outline-secondary">
-
-          </div>
-
-        </div>
-        <div>
           <p class="display-6">Tableau de synthèse</p>
-          <!-- <a href="" target="_blank"> -->
+          <a href="./files/Tableau synthèse/Tableau de synthèse.pdf" target="_blank">
             <img src="/Portfolio/img/download.png" width="50px" height="50px" />
-          <!-- </a> -->
+          </a>
           <table class="table table-bordered table-dark">
             <thead>
               <tr>
@@ -289,7 +282,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>X</td>
                 <td>X</td>
               </tr>
               <tr>
@@ -315,6 +308,7 @@
               </tr>
             </tbody>
           </table>
+          <h3 class="display-6">Documentations</h3>
           <div>
             <h4 class="display-6">Gérer le patrimoine informatique</h4>
             <a target="_blank" href="./files/Tableau synthèse/inventaire_tableau_synthèse.pdf">
@@ -328,8 +322,33 @@
             <a target="_blank" href="./files/Tableau synthèse/participer_a_la_valorisation_de_lorganisation.pdf">
               <button class="btn btn-outline-secondary">
                 Participer à la valoristation de l'image de l'organisation 
-                sur les médias numériques en tenant compte du cadre juridique et 
-                des enjeux économiques
+                sur les médias numériques
+              </button>
+            </a>
+            <a target="_blank" href="./files/Tableau synthèse/referencer les services en ligne de lorganisation.pdf">
+              <button class="btn btn-outline-secondary">
+                  Référencer les services en ligne de l'organisation
+              </button>
+            </a>
+          </div>
+          <div>
+            <h4 class="display-6">Travailler en mode projet</h4>
+            <a target="_blank" href="./files/Tableau synthèse/Planifier les activités.pdf">
+              <button class="btn btn-outline-secondary">
+                Planifier les activités
+              </button>
+            </a>
+            <a target="_blank" href="./files/Tableau synthèse/Analysez les objectifs et les modalités d’organisation.pdf">
+              <button class="btn btn-outline-secondary">
+                Analysez les objectifs et les modalités d'organisation d'un projet
+              </button>
+            </a>
+          </div>
+          <div>
+            <h4 class="display-6">Mettre à disposition des utilisateurs un service informatique</h4>
+            <a target="_blank" href="./files/Tableau synthèse/Déployez un service.pdf">
+              <button class="btn btn-outline-secondary">
+                Déployer un service
               </button>
             </a>
           </div>
@@ -338,6 +357,16 @@
             <a target="_blank" href="./files/Tableau synthèse/Mettre en œuvre des outils et stratégies de veille informationnelle.pdf">
               <button class="btn btn-outline-secondary">
                 Mettre en oeuvre des outils et stratégies de veille informationnelle
+              </button>
+            </a>
+            <a target="_blank" href="./files/Tableau synthèse/Organiser son développement professionnel.pdf">
+              <button class="btn btn-outline-secondary">
+                Gérer son identité professionnelle / Mettre en place son environnement d’apprentissage personnel
+              </button>
+            </a>
+            <a target="_blank" href="./files/Tableau synthèse/Développer son projet professionnel.pdf">
+              <button class="btn btn-outline-secondary">
+                Développer son projet professionnel
               </button>
             </a>
           </div>
@@ -399,13 +428,29 @@
           afin d’assurer la maintenance d’un service, de répondre à des incidents et à des demandes 
           d’assistance, d’identifier des problèmes et de proposer des pistes d’amélioration du service rendu.<br />
           Le travail demandé inclut d'identifier les problèmatiques de l'association "Maison des Ligues de Lorraine" (M2L) 
-          ainsi que de proposer des solutions.</p>
+          ainsi que de proposer des solutions.
+          <br /><br />
+          Vous trouverez ci-dessous les documents en rapport avec l'association M2L :
+        </p>
         <div>
-          <button class="btn btn-outline-primary" onclick="selectFile(event, 'gantt')">Diagramme de Gantt</button>
+          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'gantt')">Diagramme de Gantt</button>
+          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'diagramClass')">Diagramme de classe</button>
+          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'diagramActivite')">Diagramme d'activités</button>
+          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'diagramUseCase')">Diagramme de cas d'utilisation</button>
+
         </div>
       <!-- Partie Affichage Document -->
         <div id="gantt" class="fileContent">
           <embed src="./files/AP2/Diagramme_de_gantt.pdf" width=1200 height=700 type="application/pdf" />
+        </div>
+        <div id="diagramClass" class="fileContent">
+          <embed src="./files/AP2/Diagramme_de_classe_AP2.pdf" width=1200 height=700 type="application/pdf" />
+        </div>
+        <div id="diagramActivite" class="fileContent">
+          <embed src="./files/AP2/Diagramme_dactivite_AP2.pdf" width=1200 height=700 type="application/pdf" />
+        </div>
+        <div id="diagramUseCase" class="fileContent">
+          <embed src="./files/AP2/Diagramme_de_cas_dutilisation_AP2.pdf" width=1200 height=700 type="application/pdf" />
         </div>
       </div>
       <!-- Section Veille technologique -->

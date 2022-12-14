@@ -140,7 +140,7 @@ th, tr td {
 }
 
 /* File content style */
-#devis, #facture, #gantt, #kbis {
+#devis, #facture, #gantt, #kbis, #diagramClass, #diagramUseCase, #diagramActivite {
   display: none;
 }
 
