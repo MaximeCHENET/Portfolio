@@ -128,7 +128,7 @@ span {
 }
 th, tr td {
   margin: auto;
-  padding: auto;
+  /* padding: auto; */
   text-align: center;
 }
 

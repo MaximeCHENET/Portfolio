@@ -1,564 +1,795 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Portfolio</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-      rel="stylesheet" 
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
-      crossorigin="anonymous"
-    >
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
-      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" 
-      crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/Portfolio/style.css" />
-    <script src="/Portfolio/function.js"></script>
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+    crossorigin="anonymous"
+    />
+    <!-- JQuery, Popper.js, Bootstrap.js -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+    ></script>
 
-    <link rel="icon" href="./img/icon.png" />
-    <title>Portfolio</title>
+    <!-- CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
-  <header>
-    <div id="logo">
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'index')">Accueil</button>
-    </div>
-    <!-- Navigation entre les sections -->
-    <div class="nav">
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'profil')">Profil</button>
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'BTS')">BTS SIO</button>
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'apprentissage')">
-        Apprentissage personnel
-      </button>
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'projets')">Tableau de synthèse / Projets</button>
-      <button type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'veille')"> Veille technologique</button>
-    </div>
-    <!-- Réseaux sociaux et CV -->
-    <div class="network">
-      <a type="button" class="btn btn-outline-primary" href="https://www.linkedin.com/in/maxime-chenet-9316621b4/" target="_blank"
-        ><img src="/Portfolio/img/linkedin.png"
-      /></a>
-      <a type="button" class="btn btn-outline-primary" href="https://github.com/MaximeCHENET" target="_blank"
-        ><img src="/Portfolio/img/github.png"
-      /></a>
-      <span type="button" class="btn btn-outline-primary" onclick="changeDiv(event, 'cv')"><img src="./img/cv.png" /></span>
-    </div>
-  </header>
-
   <body>
-    <!-- Section Index (par défaut) -->
-    <div class="main">
-      <div id="index" class="tabcontent">
-        <h3 class="display-2">Maxime CHENET</h3>
-        <p class="display-6">Elève de BTS SIO SLAM 2ème année</p>
-        <p class="display-6">Portfolio 2022</p>
-      </div>
-      <!-- Section Profil -->
-      <div id="profil" class="tabcontent">
-        <h3 class="display-3">&Agrave propos de moi...</h3>
-        <p>
-          Après un Bac STI2D option SIN, j'ai obtenu ma 1ère année de BTS SNIR,
-          mêlant l'électronique avec des projets Arduino, ainsi que de la
-          programmation système avec le langage C.<br />
-          Je me suis ensuite reconverti dans le développement Web en intégrant
-          directement une 2ème année de BTS SIO SLAM. Je suis élève à l'école
-          IPSSI au campus de Marne la Vallée.
-        </p>
+    <!-- ======= Mobile nav toggle button ======= -->
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-        <h3 class="display-4">Ce que je souhaite faire après le BTS ?</h3>
-        <p>
-          Je souhaiterai approfondir mes compétences de développement en
-          continuant mes études avec un Bachelor Fullstack DevOps
-        </p>
-      </div>
-      <!-- Section BTS -->
-      <div id="BTS" class="tabcontent">
-        <h3 class="display-4">BTS SIO</h3>
-        <p>
-          Le BTS SIO forme de futurs professionnels de l’informatique 
-          à la mise en place de solutions informatiques au sein des organisations 
-          (entreprises, administrations, PME, etc.), en tant que consultant d’une SSII 
-          (société de services d’ingénierie informatique), d’une société éditrice de logiciels 
-          ou d’une société de conseils.
-        </p>
-        <ul>
-          <li>
-            Le BTS Services Informatiques aux Organisations est un diplôme reconnu par l'état de niveau BAC+2.
-          </li>
-          <li>
-            Il remplace depuis Septembre 2011, l'ancien BTS IG (Informatique de gestion).
-          </li>
-          <li>
-            En effet, cette nouvelle formule répond aux attentes de la profession en matière de qualification.
-          </li>
-          <li>
-            Le programme a évolué en fonction de la place et du rôle des TIC 
-            (Technologies de l'Information et de la Communication).
-          </li>
-          <li>
-            Et propose deux spécialités bien distinctes : Le BTS SIO Option SISR et le BTS SIO Option SLAM.
-          </li>
-        </ul>
-        <h3 class="display-4">OPTIONS...</h3>
-        <h4 class="display-6">Option SLAM</h4>
-        <p style="font-style: italic;">Solutions Logicielles et Applications Métiers</p>
-        <p>
-          La spécialisation SLAM du BTS SIO est plus orientée Développement. 
-          Elle permet d'apprendre à réaliser des logiciels, sites webs, applications mobiles; 
-          mais aussi de rédiger des documentations techniques liées à celles-ci. 
-          De plus, elle permet d'apprendre à former des utilisateurs pour gérer la maintenance des applications.
-        </p>
-        <h4 class="display-6">Option SISR</h4>
-        <p style="font-style: italic;">Solutions d'Infrastructures Systèmes et Réseaux</p>
-        <p>
-          La spécialisation SISR du BTS SIO permet d’apprendre un métier qui consiste à installer, 
-          configurer et gérer des équipements et des réseaux informatiques. 
-          Cela signifie intervenir sur la conception, la mise en place, le déploiement et 
-          la maintenance de programmes destinés à la gestion au sein d’une organisation.
-        </p>
-      </div>
-      <!-- Section Apprentissage Personnel -->
-      <div id="apprentissage" class="tabcontent">
-        <h3 class="display-4">Apprentissage personnel</h3>
-        <h4 class="display-6">JS</h4>
-        <p>Apprentissage du JS avec les cours OpenClassroom</p>
-        <!-- Lien amenant au cours OpenClassroom -->
-        <a
-          href="https://openclassrooms.com/fr/courses/
-                6175841-apprenez-a-programmer-avec-javascript"
-        >
-          <p>Apprenez à programmez avec JavaScript</p>
-        </a>
-        <!-- Lien amenant au cours OpenClassroom -->
-        <a
-          href="https://openclassrooms.com/fr/courses/
-                5543061-ecrivez-du-javascript-pour-le-web"
-        >
-          <p>Écrivez du JavaScript pour le web</p>
-        </a>
-        <h5>Vidéos(s)</h5>
-        <!-- Intégration d'une vidéo -->
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/b0dPBK37-M8"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
-        <h4 class="display-6">PHP SQL</h4>
-        <p>Apprentissage du PHP avec SQL avec le cours OpenClassroom</p>
-        <!-- Lien amenant au cours OpenClassroom -->
-        <a
-          href="https://openclassrooms.com/fr/courses/
-                918836-concevez-votre-site-web-avec-php-et-mysql"
-        >
-          <p>Concevez votre site web avec php et MySQL</p>
-        </a>
-        <h4 class="display-6">HTML CSS</h4>
-        <p>Apprentissage du HTML ET CSS avec le cours OpenClassroom</p>
-        <!-- Lien amenant au cours OpenClassroom -->
-        <a
-          href="https://openclassrooms.com/fr/courses/
-                1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3"
-        >
-          <p>Apprenez à créer votre site web avec HTML5 et CSS3</p>
-        </a>
-        <h5>Vidéo(s)</h5>
-        <!-- Intégration d'une vidéo -->
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/BdzKNrxLiSs"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <!-- Section Projets -->
-      <div id="projets" class="tabcontent">
-        <!-- <a href="/Portfolio/files/"> -->
-          
-          <!-- <embed src="files/Tableau récapitulatif matériels.pdf" width=800 height=500 type='application/pdf'/> -->
-        <!-- </a> -->
-        <h3 class="display-3">AP</h3>
-        <div id="ap">
-            <div onclick="changeDiv(event, 'ap1')" class="btn btn-outline-secondary">
-              AP1
-            </div>
-          <div onclick="changeDiv(event, 'ap2')" class="btn btn-outline-secondary">
-            AP2
-          </div>
-          <!-- <div class="btn btn-outline-secondary">
-            AP3
-          </div>
-          <div class="btn btn-outline-secondary">
-            AP4
-          </div> -->
-        </div>
-        <div>
-          <p class="display-6">Tableau de synthèse</p>
-          <a href="./files/Tableau synthèse/Tableau de synthèse.pdf" target="_blank">
-            <img src="/Portfolio/img/download.png" width="50px" height="50px" />
-          </a>
-          <table class="table table-bordered table-dark">
-            <thead>
-              <tr>
-                <th rowspan="2" scope="col">#</th>
-                <th rowspan="2" scope="col">Période (sous la forme du JJ/MM/AA au JJ/MM/AA)</th>
-                <th scope="col">Gérer le patrimoine informatique</th>
-                <th scope="col">Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
-                <th scope="col">Développer la présence en ligne de l'organisation</th>
-                <th scope="col">Travailler en mode projet</th>
-                <th scope="col">Mettre à disposition des utilisateurs un service informatique</th>
-                <th scope="col">Organiser son développement professionnel</th>
-              </tr>
-              <tr>
-                <th scope="col">
-                  - Recenser et identifier les ressources numériques<br />
-                  - Exploiter des référentiels, normes et standards adoptés par le prestataire informatique<br />
-                  - Mettre en place et vérifier les niveaux d'habilitation associés à un service<br />
-                  - Vérifier les conditions de la continuité d'un service informatique<br />
-                  - Gérer des sauvegardes<br />
-                  - Vérifier le respect des règles d'utilisation des ressources numériques
-                </th>
-                <th scope="col">
-                  - Collecter, suivre et orienter des demandes<br />
-                  - Traiter des demandes concernant les services réseau et système, applicatifs<br />
-                  - Traiter des demandes concernant les applications
-                </th>
-                <th scope="col">
-                  - Participer à la valoristation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques<br />
-                  - Référencer les sevices en ligne de l'organisation et mesurer leur visibilité<br />
-                  - Participer à l'évolution d'un site Web exploitant les données de l'organisation
-                </th>
-                <th scope="col">
-                  - Analyser les objectifs et les modalités d'organisation d'un projet<br />
-                  - Planifier les activités<br />
-                  - Evaluer les indicateurs de suivi d'un projet et analyser les écarts
-                </th>
-                <th scope="col">
-                  - Réaliser les tests d’intégration et d’acceptation d’un service<br />
-                  - Déployer un service<br />
-                  - Accompagner les utilisateurs dans la mise en place d’un service
-                </th>
-                <th scope="col">
-                  - Mettre en place son environnement d’apprentissage personnel<br />
-                  - Mettre en œuvre des outils et stratégies de veille informationnelle<br />
-                  - Gérer son identité professionnelle<br />
-                  - Développer son projet professionnel
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="8">Réalisation en cours</td>
-              </tr>
-              <tr>
-                <th scope="row">Réalisation de l'inventaire de l'IPSSI</th>
-                <td></td>
-                <td>X</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Portfolio : Créer un site web personnel</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>X</td>
-                <td>X</td>
-              </tr>
-              <tr>
-                <th scope="col">Mise en place du projet M2L / AP2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>X</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="col">Création d'une entreprise fictive / AP1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a target="_blank" >X</a></td>
-                <td></td>
-                <td></td>
-                <td></td>
+    <!-- ======= Header ======= -->
+    <header id="header">
+        <div class="profile">
 
-              </tr>
-            </tbody>
-          </table>
-          <h3 class="display-6">Documentations</h3>
-          <div>
-            <h4 class="display-6">Gérer le patrimoine informatique</h4>
-            <a target="_blank" href="./files/Tableau synthèse/inventaire_tableau_synthèse.pdf">
-              <button class="btn btn-outline-secondary">
-                Recenser et identifier les ressources numériques
-              </button>
+          <h1 class="text-light"><a href="index.html">Maxime CHENET</a></h1>
+          <div class="social-links mt-3 text-center">
+            <a href="https://github.com/MaximeCHENET" class="google-plus">
+              <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/maxime-chenet-9316621b4/" class="linkedin">
+              <i class="bx bxl-linkedin"></i>
             </a>
           </div>
-          <div>
-            <h4 class="display-6">Développer la présence en ligne de l'organisation</h4>
-            <a target="_blank" href="./files/Tableau synthèse/participer_a_la_valorisation_de_lorganisation.pdf">
-              <button class="btn btn-outline-secondary">
-                Participer à la valoristation de l'image de l'organisation 
-                sur les médias numériques
-              </button>
-            </a>
-            <a target="_blank" href="./files/Tableau synthèse/referencer les services en ligne de lorganisation.pdf">
-              <button class="btn btn-outline-secondary">
-                  Référencer les services en ligne de l'organisation
-              </button>
-            </a>
-          </div>
-          <div>
-            <h4 class="display-6">Travailler en mode projet</h4>
-            <a target="_blank" href="./files/Tableau synthèse/Planifier les activités.pdf">
-              <button class="btn btn-outline-secondary">
-                Planifier les activités
-              </button>
-            </a>
-            <a target="_blank" href="./files/Tableau synthèse/Analysez les objectifs et les modalités d’organisation.pdf">
-              <button class="btn btn-outline-secondary">
-                Analysez les objectifs et les modalités d'organisation d'un projet
-              </button>
-            </a>
-          </div>
-          <div>
-            <h4 class="display-6">Mettre à disposition des utilisateurs un service informatique</h4>
-            <a target="_blank" href="./files/Tableau synthèse/Déployez un service.pdf">
-              <button class="btn btn-outline-secondary">
-                Déployer un service
-              </button>
-            </a>
-          </div>
-          <div>
-            <h4 class="display-6">Organiser son développement professionnel</h4>
-            <a target="_blank" href="./files/Tableau synthèse/Mettre en œuvre des outils et stratégies de veille informationnelle.pdf">
-              <button class="btn btn-outline-secondary">
-                Mettre en oeuvre des outils et stratégies de veille informationnelle
-              </button>
-            </a>
-            <a target="_blank" href="./files/Tableau synthèse/Organiser son développement professionnel.pdf">
-              <button class="btn btn-outline-secondary">
-                Gérer son identité professionnelle / Mettre en place son environnement d’apprentissage personnel
-              </button>
-            </a>
-            <a target="_blank" href="./files/Tableau synthèse/Développer son projet professionnel.pdf">
-              <button class="btn btn-outline-secondary">
-                Développer son projet professionnel
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Section AP1 -->
-      <div id="ap1" class="tabcontent">
-        <h3 class="display-4">AP1</h3>
-        <h4 class="display-6" style="text-align: left;" >Présentation de l'AP1</h4>
-        <p style="text-align: left;">
-          L'AP1 consiste à s’appuyer sur la prise de connaissance de l’environnement technique 
-          destiné à permettre aux étudiants d’expérimenter les situations définies dans le référentiel 
-          d’activités professionnelles et de mener à bien les premiers projets personnalisés encadrés.<br />
-          À partir de différentes situations professionnelles définies par l’équipe pédagogique, 
-          il permet d’aborder plus particulièrement les processus « Gestion du patrimoine informatique » et 
-          « Fourniture de services » en vue d’appréhender une configuration sur les plans technique et financier, 
-          de fournir un service aux utilisateurs par la mise à disposition de cette configuration et de vérifier 
-          la conformité du service fourni à un cahier des charges.
-          <br />
-          Pour répondre aux exigences de cet AP, nous avons créé une entreprise fictive nommée Studio GD avec 
-          tous ses documents nécessaires.
-        </p>
-        <div>
-          <h4 class="display-6">Présentation de l'entreprise</h4>
-          <embed src="/Portfolio/files/AP1/Presentation_Entreprise_AP1.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-        <div>
-          <h4 class="display-6">Présentation des documents</h4>
-          <!-- <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option onclick="selectFile(event, 'devis')" value="1"><a onclick="selectFile(event, 'devis')">Devis</a></option>
-            <option onclick="selectFile(event, 'facture')" value="2"><a onclick="selectFile(event, 'facture')">Facture</a></option>
-            <option value="3"><a onclick="selectFile()">aaa</a></option>
-          </select> -->
-          <button class="btn btn-outline-primary" onclick="selectFile(event, 'devis')">Exemple Devis</button>
-          <button class="btn btn-outline-primary" onclick="selectFile(event, 'facture')">Exemple Facture</button>
-          <button class="btn btn-outline-primary" onclick="selectFile(event, 'kbis')">Exemple Kbis</button>
-          
-
         </div>
 
-<!-- Partie Affichage Document -->
-        <div id="devis" class="fileContent">
-          <embed src="/Portfolio/files/AP1/exemple_devis_AP1.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-        <div id="facture" class="fileContent">
-          <embed src="/Portfolio/files/AP1/exemple_facture_AP1.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-        <div id="kbis" class="fileContent">
-          <embed src="/Portfolio/files/AP1/exemple_kbis_AP1.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-      </div>
-      <!-- Section AP2 -->
-      <div id="ap2" class="tabcontent">
-        <h3 class="display-4">AP2</h3>
-        <h4 class="display-6" style="text-align: left;" >Présentation de l'AP2</h4>
-        <p style="text-align: left;">L'AP2 amène les étudiants à fournir un service défini par un contrat de service.<br />
-          Il place les étudiants en situation d’acteurs au sein du processus « Fourniture de services » 
-          afin d’assurer la maintenance d’un service, de répondre à des incidents et à des demandes 
-          d’assistance, d’identifier des problèmes et de proposer des pistes d’amélioration du service rendu.<br />
-          Le travail demandé inclut d'identifier les problèmatiques de l'association "Maison des Ligues de Lorraine" (M2L) 
-          ainsi que de proposer des solutions.
-          <br /><br />
-          Vous trouverez ci-dessous les documents en rapport avec l'association M2L :
-        </p>
-        <div>
-          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'gantt')">Diagramme de Gantt</button>
-          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'diagramClass')">Diagramme de classe</button>
-          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'diagramActivite')">Diagramme d'activités</button>
-          <button class="btn btn-outline-secondary" onclick="selectFile(event, 'diagramUseCase')">Diagramme de cas d'utilisation</button>
+        <nav id="navbar" class="nav-menu navbar">
+          <ul>
+            <li>
+              <a href="#hero" class="nav-link scrollto active"
+                ><i class="bx bx-home"></i> <span>Accueil</span></a
+              >
+            </li>
+            <li>
+              <a href="#profil" class="nav-link scrollto"
+                ><i class="bx bx-user"></i> <span>Profil</span></a
+              >
+            </li>
+            <li>
+              <a href="#BTS" class="nav-link scrollto"
+                ><i class="bx bx-file-blank"></i> <span>BTS SIO</span></a
+              >
+            </li>
+            <li>
+              <a href="#CV" class="nav-link scrollto"
+                ><i class="bx bx-file-blank"></i> <span>CV</span></a
+              >
+            </li>
+            <li>
+              <a href="#apprentissage" class="nav-link scrollto"
+                ><i class="bx bx-book-content"></i>
+                <span>Apprentissage Personnel</span></a
+              >
+            </li>
+            <li>
+              <a href="#projets" class="nav-link scrollto"
+                ><i class="bx bx-server"></i>
+                <span>Tableau de synthèse / Projets</span></a
+              >
+            </li>
+            <li>
+              <a href="#veille" class="nav-link scrollto"
+                ><i class="bx bx-envelope"></i>
+                <span>Veille technologique</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
+    </header>
+    <!-- Fin Header -->
 
-        </div>
-      <!-- Partie Affichage Document -->
-        <div id="gantt" class="fileContent">
-          <embed src="./files/AP2/Diagramme_de_gantt.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-        <div id="diagramClass" class="fileContent">
-          <embed src="./files/AP2/Diagramme_de_classe_AP2.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-        <div id="diagramActivite" class="fileContent">
-          <embed src="./files/AP2/Diagramme_dactivite_AP2.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-        <div id="diagramUseCase" class="fileContent">
-          <embed src="./files/AP2/Diagramme_de_cas_dutilisation_AP2.pdf" width=1200 height=700 type="application/pdf" />
-        </div>
-      </div>
-      <!-- Section Veille technologique -->
-      <div id="veille" class="tabcontent">
-        <h3 class="display-4">Veille technologique</h3>
-        <h4 class="display-6">Qu'est-ce que la veille technologique ?</h4>
-        <p style="text-align: left;">
-          La veille technologique, élément de la veille stratégique, consiste à surveiller les évolutions techniques, 
-          les innovations dans un secteur d’activité donnée. La veille technologique comprend notamment 
-          la surveillance, la collecte, le partage et la diffusion d’information permettant d’anticiper ou 
-          de s’informer sur des changements en matière de recherche, développement, brevet, 
-          lancement de nouveaux produits, matériaux, processus, concepts, innovation de fabrication, etc…. 
-          Cela a pour but d’évaluer l’impact sur l’environnement et l’organisation.
-        </p>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <div class="hero-container" data-aos="fade-in">
+        <h1>Maxime CHENET</h1>
         <p>
-          J'ai personnellement choisi de m'intéresser à L'intelligence artificielle, car ce domaine
-          ne cesse d'évoluer à une vitesse surprenante, dépassant les limites à chaque découverte.
+          Elève de BTS SIO SLAM 2ème année
         </p>
-        <h4 class="display-6">Intelligence Artificielle</h4>
-        <embed src="./files/Veille technologique IA.pdf" width=1200 height=700 type="application/pdf" />
-        <!-- <h4 class="display-6">5G / Réalité Virtuelle</h4> -->
+        <p>Portfolio 2022-2023</p>
       </div>
-      <!-- Section CV -->
-      <div id="cv" class="tabcontent">
-        <div id="cvProfil">
-          <a href="/Portfolio/files/CV.pdf" target="_blank"
-            ><img src="/Portfolio/img/download.png" width="50px" height="50px"
-          /></a>
-          <h2>Maxime CHENET</h2>
-          <p>Etudiant 2ème année BTS SIO SLAM</p>
-        </div>
-        <div id="cvContent">
-          <div id="cvExpPro">
-            <h3>Expériences Professionnelles</h3>
-            <div class="cvBloc">
-              <h4>LessonSharing</h4>
-              <p>Alternance</p>
-              <p>Développement Web</p>
-              <p class="cvInfos">
-                76 Rue du Trou Grillon, 91280 Saint-Pierre-Du-Perray
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="profil" class="about">
+        <div class="container">
+          <div class="section-title">
+            <h2>Profil</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Apprenti développeur Web</h3>
+              <div class="section-title">
+                <p>
+                  Après un Bac STI2D option SIN, j'ai obtenu ma 1ère année de BTS SNIR,
+                  mêlant l'électronique avec des projets Arduino, ainsi que de la
+                  programmation système avec le langage C.<br>
+                  Je me suis ensuite reconverti dans le développement Web en intégrant
+                  directement une 2ème année de BTS SIO SLAM. <br>Je suis élève à l'école
+                  IPSSI au campus de Marne la Vallée.
+                </p>
+              </div>
+              <p>
+                
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Date de naissance:</strong>
+                      <span>14 Novembre 2002</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Ville:</strong> <span>Meaux</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li>
+                      <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
+                      <span>20 ans</span>
+                    </li>
+                    <li>
+                      <i class="bi bi-chevron-right"></i>
+                      <strong>Diplôme en cours :</strong> <span>BTS SIO SLAM</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <h3 class="display-4">Ce que je souhaite faire après le BTS ?</h3>
+              <p>
+                Je souhaiterai approfondir mes compétences de développement en
+                continuant mes études avec un Bachelor Fullstack DevOps
               </p>
             </div>
-            <div class="cvBloc">
-              <h4>METERIS</h4>
-              <p>Alternance</p>
-              <p>Technicien Informatique</p>
-              <p class="cvInfos">8 Rue Georges Claude, 77100 Meaux</p>
-            </div>
-            <div class="cvBloc">
-              <h4>Pro&Cie</h4>
-              <p>Stage de découverte</p>
-              <p>Vente, Installation et Réparation Electroménager</p>
-              <p class="cvInfos">La Ferté sous Jouarre</p>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= BTS SIO SLAM ======= -->
+      <section id="BTS" class="BTS">
+        <div class="container">
+          <div class="section-title">
+            <h2>BTS SIO SLAM</h2>
+            <p>
+              Le BTS SIO forme de futurs professionnels de l’informatique à la mise
+              en place de solutions informatiques au sein des organisations
+              (entreprises, administrations, PME, etc.), en tant que consultant
+              d’une SSII (société de services d’ingénierie informatique), d’une
+              société éditrice de logiciels ou d’une société de conseils.
+            </p>
+          </div>
+          <div class="col-lg-20 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <div class="col-lg-6">
+              <ul>
+                <li>
+                  <i class="bi bi-chevron-right"></i>
+                  <span> BTS Services Informatiques aux Organisations est un diplôme
+                  reconnu par l'état de niveau BAC+2.</span>
+                </li>
+                
+                <li><i class="bi bi-chevron-right"></i>
+                  Il remplace depuis Septembre 2011, l'ancien BTS IG (Informatique de
+                  gestion).
+                </li>
+                <li><i class="bi bi-chevron-right"></i>
+                  En effet, cette nouvelle formule répond aux attentes de la
+                  profession en matière de qualification.
+                </li>
+                <li><i class="bi bi-chevron-right"></i>
+                  Le programme a évolué en fonction de la place et du rôle des TIC
+                  (Technologies de l'Information et de la Communication).
+                </li>
+                <li><i class="bi bi-chevron-right"></i>
+                  Et propose deux spécialités bien distinctes : Le BTS SIO Option SISR
+                  et le BTS SIO Option SLAM.
+                </li>
+              </ul>
             </div>
           </div>
-          <div id="cvFormations">
-            <h3>Formations</h3>
-            <div class="cvBloc">
-              <h4>IPSSI</h4>
-              <p>BTS SIO SLAM</p>
-              <p class="cvInfos">14 Av. de l'Europe, 77144 Montévrain</p>
-            </div>
-            <div class="cvBloc">
-              <h4>UTEC</h4>
-              <p>BTS SNIR 1ère année</p>
-              <p class="cvInfos">6 Bd Olof Palme, 77184 Emerainville</p>
-            </div>
-            <div class="cvBloc">
-              <h4>Sainte Céline</h4>
-              <p>Baccalauréat STI2D option SIN</p>
-              <p class="cvInfos">La Ferté sous Jouarre</p>
-            </div>
-            <div class="cvBloc">
-              <h4>Sainte Marie</h4>
-              <p>Brevet des Collèges</p>
-              <p class="cvInfos">Meaux</p>
+          <p>
+            Cybersécurité des services informatiques : Vous êtes formé à la cybersécurité et à son intégration dans l’entreprise en tenant compte des dimensions techniques, organisationnelles, juridiques…<br />
+            Vous obtenez ainsi des compétences sur la protection des données et l’identité numérique de l’entreprise, la sécurisation des équipements et usages des utilisateurs. 
+          </p>
+          <div class="col-lg-15 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>OPTIONS...</h3>
+            <div class="row">
+              <div class="col-lg-7">
+                <h4>Solutions Logicielles et Applications Métiers</h4>
+                <p>
+                  La spécialisation SLAM du BTS SIO est plus orientée Développement.
+                  Elle permet d'apprendre à réaliser des logiciels, sites webs,
+                  applications mobiles; mais aussi de rédiger des documentations
+                  techniques liées à celles-ci. De plus, elle permet d'apprendre à
+                  former des utilisateurs pour gérer la maintenance des applications.<br />
+                  Vous êtes formé à la cyber sécurisation d’une solution applicative et de son développement.
+                </p>
+              </div>
+              <div class="col-lg-7">
+                <h4>Solutions d'Infrastructures Systèmes et Réseaux</h4>
+                <p>
+                  La spécialisation SISR du BTS SIO permet d’apprendre un métier qui
+                  consiste à installer, configurer et gérer des équipements et des
+                  réseaux informatiques. Cela signifie intervenir sur la conception, la
+                  mise en place, le déploiement et la maintenance de programmes destinés
+                  à la gestion au sein d’une organisation.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div id="cvFoot">
-          <h4>Compétences</h4>
-          <br />
-          <div class="cvBlocFoot">
-            <p>HTML</p>
+      </section>
+
+      <!-- ======= CV Section ======= -->
+      <section id="CV" class="resume">
+        <div class="container">
+          <div class="section-title">
+            <h2>CV</h2>
+            <a
+              href="./files/CV.pdf"
+              target="_blank"
+            >
+              <img
+                src="./assets/img/download.png"
+                alt="Telechargement"
+                width="50px"
+                height="50px"
+              />
+            </a>
           </div>
-          <div class="cvBlocFoot">
-            <p>CSS</p>
+          <div class="row">
+            
+            <br>
+            <div class="col-lg-6" data-aos="fade-up">
+              <div class="resume-item pb-0">
+                <h4>Maxime Chenet</h4>
+                <p>
+                  <em>Etudiant 2ème année BTS SIO SLAM</em>
+                </p>
+              </div>
+
+              <h3 class="resume-title">Formations</h3>
+              <div class="resume-item">
+                <h4>BTS SIO SLAM</h4>
+                <h5>2022-2023</h5>
+                <p><em>IPSSI Campus Marne-La-Vallée, 14 Av. de l'Europe, 77144 Montévrain</em></p>
+              </div>
+              <div class="resume-item">
+                <h4>BTS SNIR 1ère année</h4>
+                <h5>2020-2022</h5>
+                <p><em>UTEC, 6 Bd Olof Palme, 77184 Emerainville</em></p>
+              </div>
+              <div class="resume-item">
+                <h4>Baccalauréat STI2D option SIN</h4>
+                <h5>2018-2020</h5>
+                <p><em>Lycée Sainte Céline, La Ferté sous Jouarre</em></p>
+              </div>
+              <div class="resume-item">
+                <h4>Brevet des Collèges</h4>
+                <h5>2013-2016</h5>
+                <p><em>Collège Sainte Marie, Meaux</em></p>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Expériences Professionnelles</h3>
+              <div class="resume-item">
+                <h4>Développeur Web</h4>
+                <h5>2022 - Poste Actuel</h5>
+                <p><em>LessonSharing<br> 76 Rue du Trou Grillon, 91280 Saint-Pierre-Du-Perray</em></p>
+              </div>
+              <div class="resume-item">
+                <h4>Technicien Informatique</h4>
+                <h5>2021-2022</h5>
+                <p><em>METERIS<br> 8 Rue Georges Claude, 77100 Meaux</em></p>
+              </div>
+              <div class="resume-item">
+                <h4>Vente, Installation et Réparation Electroménager</h4>
+                <h5>2017</h5>
+                <p><em>Pro&Cie<br> La Ferté sous Jouarre</em></p>
+              </div>
+            </div>
           </div>
-          <div class="cvBlocFoot">
-            <p>PHP</p>
+
+          <!-- Compétences -->
+          <section class="skills">
+            <div class="row skills-content">
+              <div class="section-title">
+                <h2>Compétences</h2>
+              </div>
+              <div class="col-lg-6" data-aos="fade-up">
+                <div class="progress">
+                  <span class="skill">HTML <i class="val">95%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="progress">
+                  <span class="skill">CSS <i class="val">90%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="progress">
+                  <span class="skill">JavaScript <i class="val">75%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="progress">
+                  <span class="skill">PHP <i class="val">80%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="progress">
+                  <span class="skill">Dart/Flutter <i class="val">55%</i></span>
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-valuenow="55"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Fin Compétences -->
+        </div>
+      </section>
+      <!-- Fin CV -->
+
+      <!-- ======= Apprentissage Personnel ======= -->
+      <section id="apprentissage" class="resume section-bg">
+        <div class="container">
+          <div class="section-title">
+            <h2>Apprentissage Personnel</h2>
+            <p>
+              Vous trouverez ici le contenu qui m'a aidé à apprendre différents langages :
+            </p>
           </div>
-          <div class="cvBlocFoot">
-            <p>JS</p>
-          </div>
-          <div class="cvBlocFoot">
-            <p>Python</p>
-          </div>
-          <div class="cvBlocFoot">
-            <p>C</p>
-          </div>
-          <div class="cvBlocFoot">
-            <p>C#</p>
-          </div>
-          <div class="cvBlocFoot">
-            <p>C++</p>
+
+          <div class="row" data-aos="fade-up">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <div class="col-lg-6" data-aos="fade-up">
+                <div class="resume-item pb-0">
+                  <div class="section-title">
+                    <h3 class="resume-title">Dart / Flutter</h3>
+                  </div>
+                  <div class="portfolio links">
+                    <h5>Vidéos(s)</h5>
+                      <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/csoCf4lJWds" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                      ></iframe>
+                  </div>
+
+                </div>
+                <div class="resume-item pb-0">
+                  <div class="section-title">
+                    <h3 class="resume-title">JavaScript</h3>
+                  </div>
+                  
+                  <div class="portfolio links">
+                    <p>Apprentissage du JS avec les cours OpenClassroom</p>
+                    <!-- Lien amenant au cours OpenClassroom -->
+                    <a href="https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript">
+                      <p>Apprenez à programmez avec JavaScript</p>
+                    </a>
+                    <!-- Lien amenant au cours OpenClassroom -->
+                    <a href="https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web">
+                      <p>Écrivez du JavaScript pour le web</p>
+                    </a>
+                    <h5>Vidéos(s)</h5>
+                    <!-- Intégration d'une vidéo -->
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/b0dPBK37-M8"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+
+                <div class="resume-item pb-0">
+                  <div class="section-title">
+                    <h3 class="resume-title">PHP / SQL</h3>
+                  </div>
+                  <div class="portfolio links">
+                    <p>Apprentissage du PHP avec SQL avec le cours OpenClassroom</p>
+                    <!-- Lien amenant au cours OpenClassroom -->
+                    <a href="https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql">
+                      <p>Concevez votre site web avec php et MySQL</p>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="resume-item pb-0">
+                  <div class="section-title">
+                    <h3>HTML CSS</h3>
+                  </div>
+                  <div class="portfolio links">
+                    <p>Apprentissage du HTML ET CSS avec le cours OpenClassroom</p>
+                    <!-- Lien amenant au cours OpenClassroom -->
+                    <a
+                      href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3"
+                    >
+                      <p>Apprenez à créer votre site web avec HTML5 et CSS3</p>
+                    </a>
+                    <h5>Vidéo(s)</h5>
+                    <!-- Intégration d'une vidéo -->
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/BdzKNrxLiSs"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
+              
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <!-- ======= ¨Projets ======= -->
+      <section id="projets" class="services">
+        <div class="container">
+          <div class="section-title">
+            <h2>Projets</h2>
+              <h3>Réalisation d'une entreprise fictive</h3>
+              <p>
+                L'AP1 consiste à s’appuyer sur la prise de connaissance de
+                l’environnement technique destiné à permettre aux étudiants
+                d’expérimenter les situations définies dans le référentiel d’activités
+                professionnelles et de mener à bien les premiers projets personnalisés
+                encadrés.<br />
+                À partir de différentes situations professionnelles définies par
+                l’équipe pédagogique, il permet d’aborder plus particulièrement les
+                processus « Gestion du patrimoine informatique » et « Fourniture de
+                services » en vue d’appréhender une configuration sur les plans
+                technique et financier, de fournir un service aux utilisateurs par la
+                mise à disposition de cette configuration et de vérifier la conformité
+                du service fourni à un cahier des charges.
+                <br />
+                Pour répondre aux exigences de cet AP, nous avons créé une entreprise
+                fictive nommée Studio GD avec tous ses documents nécessaires.
+              </p>
+              <div>
+                <h4>Présentation de l'entreprise</h4>
+                <embed
+                  src="./files/AP1/Presentation_Entreprise_AP1.pdf"
+                  width="1200"
+                  height="700"
+                  type="application/pdf"
+                />
+              </div>
+              <br>
+              <div>
+                <h4>Présentation des documents</h4>
+                <button
+                  class="btn btn-outline-primary"
+                  onclick="selectFile(event, 'devis')"
+                >
+                  Exemple Devis
+                </button>
+                <button
+                  class="btn btn-outline-primary"
+                  onclick="selectFile(event, 'facture')"
+                >
+                  Exemple Facture
+                </button>
+                <button
+                  class="btn btn-outline-primary"
+                  onclick="selectFile(event, 'kbis')"
+                >
+                  Exemple Kbis
+                </button>
+              </div>
+              <div>
+                <!-- Partie Affichage Document -->
+                <div id="devis" class="fileContent">
+                  <embed
+                    src="./files/AP1/exemple_devis_AP1.pdf"
+                    width="1200"
+                    height="700"
+                    type="application/pdf"
+                  />
+                </div>
+                <div id="facture" class="fileContent">
+                  <embed
+                    src="./files/AP1/exemple_facture_AP1.pdf"
+                    width="1200"
+                    height="700"
+                    type="application/pdf"
+                  />
+                </div>
+                <div id="kbis" class="fileContent">
+                  <embed
+                    src="./files/AP1/exemple_kbis_AP1.pdf"
+                    width="1200"
+                    height="700"
+                    type="application/pdf"
+                  />
+                </div>
+              </div>
+            <p class="display-6">Tableau de synthèse</p>
+            <a
+              href="./files/Tableau_synthèse/Tableau_de_synthèse.pdf"
+              target="_blank"
+            >
+              <img
+                src="./assets/img/download.png"
+                alt="Telechargement"
+                width="50px"
+                height="50px"
+              />
+            </a>
+            <br />
+            <embed
+              src="./files/Tableau_synthèse/Tableau_de_synthèse.pdf"
+              width="100%"
+              height="500"
+              type="application/pdf"
+            />
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+              <div class="dropdown">
+                <div class="icon"><i class="bi bi-1-circle"></i></div>
+                <h4 class="title">Gérer le patrimoine informatique</h4>
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                1 document 
+                </button>  
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/inventaire_tableau_synthèse.pdf">
+                    Recenser et identifier les ressources numériques
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bi bi-2-circle"></i></div>
+              <h4 class="title">
+                Répondre aux
+                incidents et aux demandes d’assistance 
+                et d’évolution
+              </h4>
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                1 document 
+              </button> 
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/Documentation_GLPI.pdf">
+                  ▸Collecter, suivre et orienter des demandes<br>
+                  ▸Traiter des demandes concernant les services réseau et système, applicatifs<br>
+                  ▸Traiter des demandes concernant les applications
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="dropdown">
+                <div class="icon"><i class="bi bi-3-circle"></i></div>
+                <h4 class="title">Développer la présence en ligne de l'organisation</h4>
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                2 documents
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/participer_a_la_valorisation_de_lorganisation.pdf">
+                    Participer à la valoristation de l'image de l'organisation sur
+                    les médias numériques
+                  </a>
+                  <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/referencer_les_services_en_ligne_de_lorganisation.pdf">
+                    Référencer les services en ligne de l'organisation
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bi bi-4-circle"></i></div>
+              <h4 class="title">Travailler en mode projet</h4>
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                2 documents
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/Planifier_les_activités.pdf">
+                  Planifier les activités
+                </a>
+                <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/Analysez_les_objectifs_et_les_modalités_dorganisation.pdf">
+                  Analysez les objectifs et les modalités d'organisation d'un
+                  projet
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bi bi-5-circle"></i></div>
+              <h4 class="title">Mettre à disposition des utilisateurs un service informatique</h4>
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                1 document
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/Déployez_un_service.pdf">
+                    Déployer un service
+                  </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon"><i class="bi bi-6-circle"></i></div>
+              <h4 class="title"><a href="">Organiser son développement professionnel</a></h4>
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                3 documents
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/Mettre_en_œuvre_des_outils_et_stratégies_de_veille_informationnelle.pdf">
+                  Mettre en oeuvre des outils et stratégies de veille
+                  informationnelle
+                </a>
+                <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/Organiser_son_développement_professionnel.pdf">
+                  Gérer son identité professionnelle / Mettre en place son
+                  environnement d’apprentissage personnel
+                </a>
+                <a class="dropdown-item" target="_blank" href="./files/Tableau_synthèse/Développer_son_projet_professionnel.pdf">
+                  Développer son projet professionnel
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  <!-- Partie Veille Technologique -->
+      <section id="veille">
+        <div class="container">
+          <div class="section-title">
+            <h2>Veilles Technologiques</h2>
+          </div>
+          <h3>Qu'est-ce que la veille technologique ?</h3>
+          <p style="text-align: left">
+            La veille technologique, élément de la veille stratégique, consiste à
+            surveiller les évolutions techniques, les innovations dans un secteur
+            d’activité donnée. La veille technologique comprend notamment la
+            surveillance, la collecte, le partage et la diffusion d’information
+            permettant d’anticiper ou de s’informer sur des changements en matière
+            de recherche, développement, brevet, lancement de nouveaux produits,
+            matériaux, processus, concepts, innovation de fabrication, etc…. Cela
+            a pour but d’évaluer l’impact sur l’environnement et l’organisation.
+          </p>
+          <p>
+            J'ai personnellement choisi de m'intéresser à L'intelligence
+            artificielle, car ce domaine ne cesse d'évoluer à une vitesse
+            surprenante, dépassant les limites à chaque découverte.
+          </p>
+          <h3>Intelligence Artificielle</h3>
+          <embed
+          src="./files/Veille_technologique_IA.pdf"
+          width="1200"
+          height="700"
+          type="application/pdf"
+          />
+          <h3>Réalité Virtuelle</h3>
+
+        </div>
+      </section>
+
+    </main>
+    <!-- End #main -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
